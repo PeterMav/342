@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        println("Peter Mavridis")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
