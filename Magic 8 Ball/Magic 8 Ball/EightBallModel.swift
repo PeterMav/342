@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EightBallModel: NSObject {
+class EightBallModel: NSObject, Printable, DebugPrintable {
     let initialResponseArray = [String]();
     var responseArray = [String]();
     
@@ -25,5 +25,13 @@ class EightBallModel: NSObject {
     func randomSelector() {
         let randomIndex = Int(arc4random_uniform(UInt32(responseArray.count)))
         println(responseArray[randomIndex])
+    }
+    
+    var description : String {
+        
+    }
+    
+    var debugDescription : String {
+        
     }
 }
