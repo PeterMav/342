@@ -15,15 +15,17 @@ class ViewController: UIViewController {
         println("Peter Mavridis")
         
         var age : Double = 107.392294029
+        print("My age: ")
         println(String(format: "%.2f", age))
         
         var nameVariable : String = "Peter Mavridis"
         println(nameVariable)
         
         var EightBall = EightBallModel()
-        EightBall.responseArray += ["Hack Yes!"]
+        EightBall.responseArray += ["Heck Yes!"]
         EightBall.responseArray += ["Heck No!"]
         EightBall.responseArray += ["Maybe"]
+        EightBall.responseArray += ["💩"]
         
         println("Will I get full marks for this lab?")
         EightBall.randomSelector()
@@ -34,6 +36,9 @@ class ViewController: UIViewController {
         println("Will I end up becoming a cat person when I get old?")
         EightBall.randomSelector()
         
+        
+        println(EightBall)
+        debugPrintln(EightBall)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
