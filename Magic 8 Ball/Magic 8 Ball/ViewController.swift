@@ -11,7 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         println("Peter Mavridis")
+        
+        var age : Double = 107.392294029
+        println(String(format: "%.2f", age))
+        
+        var nameVariable : String = "Peter Mavridis"
+        println(nameVariable)
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
