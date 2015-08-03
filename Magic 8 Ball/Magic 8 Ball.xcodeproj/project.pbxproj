@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37638E8F1B6F018900DB566E /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37638E8E1B6F018900DB566E /* EightBallModel.swift */; };
-		37638E901B6F018900DB566E /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37638E8E1B6F018900DB566E /* EightBallModel.swift */; };
+		3039AB191B6F16F700D97751 /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039AB181B6F16F700D97751 /* EightBallModel.swift */; };
+		3039AB1A1B6F16F700D97751 /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039AB181B6F16F700D97751 /* EightBallModel.swift */; };
 		37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0C1B6EF77400726195 /* AppDelegate.swift */; };
 		37752C0F1B6EF77400726195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0E1B6EF77400726195 /* ViewController.swift */; };
 		37752C121B6EF77400726195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37752C101B6EF77400726195 /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37638E8E1B6F018900DB566E /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
+		3039AB181B6F16F700D97751 /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
 		37752C071B6EF77400726195 /* Magic 8 Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic 8 Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C0B1B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C0C1B6EF77400726195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				37752C131B6EF77400726195 /* Images.xcassets */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
 				37752C0A1B6EF77400726195 /* Supporting Files */,
-				37638E8E1B6F018900DB566E /* EightBallModel.swift */,
+				3039AB181B6F16F700D97751 /* EightBallModel.swift */,
 			);
 			path = "Magic 8 Ball";
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			files = (
 				37752C0F1B6EF77400726195 /* ViewController.swift in Sources */,
 				37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */,
-				37638E8F1B6F018900DB566E /* EightBallModel.swift in Sources */,
+				3039AB191B6F16F700D97751 /* EightBallModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37638E901B6F018900DB566E /* EightBallModel.swift in Sources */,
+				3039AB1A1B6F16F700D97751 /* EightBallModel.swift in Sources */,
 				37752C231B6EF77400726195 /* Magic_8_BallTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

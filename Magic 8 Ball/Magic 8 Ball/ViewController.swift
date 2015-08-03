@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         var nameVariable : String = "Peter Mavridis"
         println(nameVariable)
         
+        var EightBall = EightBallModel()
+        EightBall.responseArray += ["Yes!"]
+        EightBall.responseArray += ["No!"]
+        
+        println("Will I get full marks for this lab?")
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

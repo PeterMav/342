@@ -2,26 +2,23 @@
 //  EightBallModel.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 3/08/2015.
+//  Created by csci321ga1a on 3/08/2015.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-// Default Constructor. Sets the responseArray property with
-// the initialResponseArray
-
-class EightBallModel : Printable, DebugPrintable {
-    let initialResponseArray : String = "Yes!"
+class EightBallModel: NSObject {
+    let initialResponseArray = [String]();
+    var responseArray = [String]();
     
-}
-
-init () {
-
+    override init () {
+        
+        
+    }
     
-}
-
-init(extraResponseArray : Array<String>) {
-    
-    
+    init(extraResponseArray : Array<String>) {
+        
+        
+    }
 }
