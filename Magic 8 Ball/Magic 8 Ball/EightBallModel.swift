@@ -29,7 +29,7 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         for var i = 0; i < responseArray.count; i++ {
             println(responseArray[i])
         }
-        return EXPIRE_AFTER_CONTROL_ENTRY
+        return "Hello!"
     }
     
     override var debugDescription : String {
