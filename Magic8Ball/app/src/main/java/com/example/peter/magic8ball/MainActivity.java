@@ -5,6 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+class Magic8BallModel extends Object {
+    public Magic8BallModel () {
+
+    }
+    protected String[] responseArray = {"Heck Yes!", "Heck No!", "Maybe?"};
+
+    void randomSelection(){
+
+    }
+}
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,11 +29,14 @@ public class MainActivity extends AppCompatActivity {
         System.out.println();
         String myName = "Peter Mavridis";
         System.out.println(myName);
-        System.out.println("Will I get full marks for this lab?")
 
-        System.out.println("Will the Cronulla Sharks receive a premiership this year?")
+        Magic8BallModel eightBall;
 
-        System.out.println("Will I end up becoming a cat person when I get old?")
+        System.out.println("Will I get full marks for this lab?");
+
+        System.out.println("Will the Cronulla Sharks receive a premiership this year?");
+
+        System.out.println("Will I end up becoming a cat person when I get old?");
     }
 
     @Override
