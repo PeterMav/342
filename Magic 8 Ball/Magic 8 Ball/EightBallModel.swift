@@ -6,11 +6,19 @@
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
+
+/*
+    Question 9 
+    Storing emoji's in Swift is not a problem as part of a string
+    or variable. You can also use an emoji as a var name...
+
+*/
 import UIKit
 
 class EightBallModel: NSObject, Printable, DebugPrintable {
     let initialResponseArray = [String]()
     var responseArray = [String]()
+    var temp = " "
 
     override init () {
         
@@ -25,21 +33,28 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     override var description : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
+        println("=========================")
+        println("From description function")
         
         for var i = 0; i < responseArray.count; i++ {
-            println(responseArray[i])
+            temp += responseArray[i]
         }
-        return "Hello!"
+        return temp
     }
     
     override var debugDescription : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
         // Make sure the string starts with the word "Debug:"
+        
+        temp.removeAll(keepCapacity: false)// Resests temp to empty
+        
+        println("******************************")
+        println("From debugDescription function")
         for var i = 0; i < responseArray.count; i++ {
-            println("Debug: \(responseArray[i])")
+            temp += responseArray[i]
         }
-        return "Hello!"
+        return temp
     }
     
     func randomSelector() {

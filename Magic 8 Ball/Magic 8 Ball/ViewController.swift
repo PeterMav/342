@@ -23,10 +23,10 @@ class ViewController: UIViewController {
         
         var EightBall = EightBallModel()
         EightBall.responseArray += ["Heck Yes!"]
-        EightBall.responseArray += ["Heck No!"]
-        EightBall.responseArray += ["Maybe"]
-        EightBall.responseArray += ["💩"]
-        
+        EightBall.responseArray += [" Heck No!"]
+        EightBall.responseArray += [" Maybe"]
+        EightBall.responseArray += [" 💩"]
+        println()
         println("Will I get full marks for this lab?")
         EightBall.randomSelector()
         
@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         EightBall.randomSelector()
         
         
-        println(EightBall)
-        //EightBall.description
-        debugPrintln(EightBall)
+        println(EightBall.description)
+
+        debugPrintln("Debug: \(EightBall.debugDescription)")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
