@@ -39,7 +39,7 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         for var i = 0; i < responseArray.count; i++ {
             println("Debug: \(responseArray[i])")
         }
-        return "Debug Error!"
+        return "Hello!"
     }
     
     func randomSelector() {
