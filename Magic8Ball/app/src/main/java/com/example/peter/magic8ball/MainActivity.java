@@ -12,7 +12,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.println("Peter Mavridis");
-        System.out.println("My age: ");
+        double age = 102.48394;
+        System.out.printf("My age: %.2f", age);
+        System.out.println();
+        String myName = "Peter Mavridis";
+        System.out.println(myName);
+        System.out.println("Will I get full marks for this lab?")
+
+        System.out.println("Will the Cronulla Sharks receive a premiership this year?")
+
+        System.out.println("Will I end up becoming a cat person when I get old?")
     }
 
     @Override
