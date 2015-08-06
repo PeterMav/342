@@ -1,18 +1,21 @@
 package com.example.peter.magic8ball;
 
+import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import java.util.Random;
 
 class Magic8BallModel extends Object {
     public Magic8BallModel () {
 
+        responseArray = new String[]{"Heck Yes!", "Heck No!", "Maybe?"};
     }
-    protected String[] responseArray = {"Heck Yes!", "Heck No!", "Maybe?"};
+    public String[] responseArray;
 
-    void randomSelection(){
-
+    public void randomSelection(){
+        System.out.println(responseArray[new Random().nextInt(responseArray.length)]);
     }
 }
 
@@ -30,13 +33,14 @@ public class MainActivity extends AppCompatActivity {
         String myName = "Peter Mavridis";
         System.out.println(myName);
 
-        Magic8BallModel eightBall;
+        Magic8BallModel eightBall = new Magic8BallModel();
 
         System.out.println("Will I get full marks for this lab?");
-
+        eightBall.randomSelection();
         System.out.println("Will the Cronulla Sharks receive a premiership this year?");
-
+        eightBall.randomSelection();
         System.out.println("Will I end up becoming a cat person when I get old?");
+        eightBall.randomSelection();
     }
 
     @Override
