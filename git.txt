@@ -2,3 +2,4 @@ Petros Mavridis
 4256670
 pm554@uowmail.edu.au
 
+1. Git is a versioning system that allows for multiple users to collaberate on a project. Projects can be branched off from the master
