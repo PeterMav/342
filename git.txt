@@ -2,4 +2,20 @@ Petros Mavridis
 4256670
 pm554@uowmail.edu.au
 
-1. Git is a versioning system that allows for multiple users to collaberate on a project. Projects can be branched off from the master
+1. 	Git is a versioning system that allows for multiple users to collaberate on a project. Git is different
+	from other versioning systems is that SVN thinks of its data as a set of files that tracks their changes over time. Git takes snapshops of the data and creates a mini file system at the moment and stores a reference to that snapshot.
+
+2. 	A branch in Git allows you to work on a copy of the master branch without affecting the master copy. You
+	would use branch if you needed to implement new features without changing the master copy.
+
+3.	user@user: /GIT# mkdir test
+	user@user: /GIT/test# git init
+	user@user: /GIT/test# git commit -m 'my first commit'
+
+	Or you can change to the directory that you want on git and just type git init
+
+4. 	Use can add the files to ignore by adding them to the .gitignore file. Any file or extension type
+	listed here will not be pushed to the repository.
+
+5. 	git push hithub master
+	You would do this when you have made changes. Can be done once you have completed or as you go along.
