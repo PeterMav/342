@@ -2,6 +2,7 @@
 <project version="4">
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
+<<<<<<< Updated upstream
   </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
@@ -26,6 +27,8 @@
         </list>
       </value>
     </option>
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
