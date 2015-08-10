@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         EightBall.responseArray += [" Maybe"]
         EightBall.responseArray += [" 💩"]
         println()
-        println("Will I get full marks for this lab?")
+        print("Will I get full marks for this lab?\n")
         EightBall.randomSelector()
         
-        println("Will the Cronulla Sharks receive a premiership this year?")
+        print("Will the Cronulla Sharks receive a premiership this year?\n")
         EightBall.randomSelector()
         
-        println("Will I end up becoming a cat person when I get old?")
+        print("Will I end up becoming a cat person when I get old?\n")
         EightBall.randomSelector()
         
         

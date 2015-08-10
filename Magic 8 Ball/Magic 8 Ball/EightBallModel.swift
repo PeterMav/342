@@ -33,8 +33,8 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     override var description : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
-        println("=========================")
-        println("From description function")
+        print("=========================\n")
+        print("From description function\n")
         
         for var i = 0; i < responseArray.count; i++ {
             temp += responseArray[i]
@@ -49,8 +49,8 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         
         temp.removeAll(keepCapacity: false)// Resests temp to empty
         
-        println("******************************")
-        println("From debugDescription function")
+        print("******************************\n")
+        print("From debugDescription function\n")
         for var i = 0; i < responseArray.count; i++ {
             temp += responseArray[i]
         }
