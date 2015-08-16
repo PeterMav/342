@@ -15,6 +15,14 @@
 		37752C141B6EF77400726195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37752C131B6EF77400726195 /* Images.xcassets */; };
 		37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37752C151B6EF77400726195 /* LaunchScreen.xib */; };
 		37752C231B6EF77400726195 /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C221B6EF77400726195 /* Magic_8_BallTests.swift */; };
+		D02521EB1B80A40C004B0236 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E31B80A40C004B0236 /* background.png */; };
+		D02521EC1B80A40C004B0236 /* circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E41B80A40C004B0236 /* circle1.png */; };
+		D02521ED1B80A40C004B0236 /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E51B80A40C004B0236 /* circle2.png */; };
+		D02521EE1B80A40C004B0236 /* circle3.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E61B80A40C004B0236 /* circle3.png */; };
+		D02521EF1B80A40C004B0236 /* circle4.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E71B80A40C004B0236 /* circle4.png */; };
+		D02521F01B80A40C004B0236 /* circle5.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E81B80A40C004B0236 /* circle5.png */; };
+		D02521F11B80A40C004B0236 /* circle6.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E91B80A40C004B0236 /* circle6.png */; };
+		D02521F21B80A40C004B0236 /* shakeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521EA1B80A40C004B0236 /* shakeButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +47,14 @@
 		37752C1C1B6EF77400726195 /* Magic 8 BallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic 8 BallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C211B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C221B6EF77400726195 /* Magic_8_BallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallTests.swift; sourceTree = "<group>"; };
+		D02521E31B80A40C004B0236 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		D02521E41B80A40C004B0236 /* circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle1.png; sourceTree = "<group>"; };
+		D02521E51B80A40C004B0236 /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
+		D02521E61B80A40C004B0236 /* circle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle3.png; sourceTree = "<group>"; };
+		D02521E71B80A40C004B0236 /* circle4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle4.png; sourceTree = "<group>"; };
+		D02521E81B80A40C004B0236 /* circle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle5.png; sourceTree = "<group>"; };
+		D02521E91B80A40C004B0236 /* circle6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle6.png; sourceTree = "<group>"; };
+		D02521EA1B80A40C004B0236 /* shakeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,14 @@
 		37752C091B6EF77400726195 /* Magic 8 Ball */ = {
 			isa = PBXGroup;
 			children = (
+				D02521E31B80A40C004B0236 /* background.png */,
+				D02521E41B80A40C004B0236 /* circle1.png */,
+				D02521E51B80A40C004B0236 /* circle2.png */,
+				D02521E61B80A40C004B0236 /* circle3.png */,
+				D02521E71B80A40C004B0236 /* circle4.png */,
+				D02521E81B80A40C004B0236 /* circle5.png */,
+				D02521E91B80A40C004B0236 /* circle6.png */,
+				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C0C1B6EF77400726195 /* AppDelegate.swift */,
 				37752C0E1B6EF77400726195 /* ViewController.swift */,
 				37752C101B6EF77400726195 /* Main.storyboard */,
@@ -196,7 +220,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02521F11B80A40C004B0236 /* circle6.png in Resources */,
+				D02521ED1B80A40C004B0236 /* circle2.png in Resources */,
+				D02521F21B80A40C004B0236 /* shakeButton.png in Resources */,
+				D02521EC1B80A40C004B0236 /* circle1.png in Resources */,
 				37752C121B6EF77400726195 /* Main.storyboard in Resources */,
+				D02521EE1B80A40C004B0236 /* circle3.png in Resources */,
+				D02521EF1B80A40C004B0236 /* circle4.png in Resources */,
+				D02521EB1B80A40C004B0236 /* background.png in Resources */,
+				D02521F01B80A40C004B0236 /* circle5.png in Resources */,
 				37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */,
 				37752C141B6EF77400726195 /* Images.xcassets in Resources */,
 			);
