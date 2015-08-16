@@ -19,9 +19,14 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     let initialResponseArray = [String]()
     var responseArray = [String]()
     var temp = " "
-
+    var changeImage = [String]()
     override init () {
-        
+        changeImage += ["circle1.png"]
+        changeImage += ["circle2.png"]
+        changeImage += ["circle3.png"]
+        changeImage += ["circle4.png"]
+        changeImage += ["circle5.png"]
+        changeImage += ["circle6.png"]
         
     }
     

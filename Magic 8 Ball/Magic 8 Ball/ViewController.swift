@@ -8,11 +8,13 @@
 
 import UIKit
 var EightBall = EightBallModel()
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var inputText: UITextField!
    
+    @IBOutlet weak var circleImage: UIImageView!
+    
     @IBOutlet weak var outputText: UILabel!
     
     override func viewDidLoad() {
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         var nameVariable : String = "Peter Mavridis"
         println(nameVariable)
         
-        
+        outputText.alpha = 0.0
         EightBall.responseArray += ["Heck Yes!"]
         EightBall.responseArray += [" Heck No!"]
         EightBall.responseArray += [" Maybe"]
@@ -47,16 +49,37 @@ class ViewController: UIViewController {
         debugPrintln("Debug: \(EightBall.debugDescription)")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // For the GO button onscreen keyboard
+        inputText.delegate = self
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
     
+    
+   
+    // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
         outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
+        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
+        fadeIn()
+    }
+    // For the GO button onscreen keyboard.
+    func textFieldShouldReturn(inputText: UITextField) -> Bool {
+        inputText.resignFirstResponder()
+        outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
+        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
+        fadeIn()
+        return true
     }
     
+    func fadeIn() {
+        outputText.alpha = 0
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(2)
+        outputText.alpha = 1
+    }
 }
 
