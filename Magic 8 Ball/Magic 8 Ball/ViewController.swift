@@ -62,16 +62,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
    
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
-        outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
-        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
-        fadeIn()
+        changeLabel()
+        changeCircle()
     }
     // For the GO button onscreen keyboard.
     func textFieldShouldReturn(inputText: UITextField) -> Bool {
         inputText.resignFirstResponder()
-        outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
-        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
-        fadeIn()
+        changeLabel()
+        changeCircle()
         return true
     }
     
@@ -80,6 +78,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(2)
         outputText.alpha = 1
+    }
+    
+    func changeCircle() {
+        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
+    }
+    
+    func changeLabel() {
+        outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
+        fadeIn()
     }
 }
 
