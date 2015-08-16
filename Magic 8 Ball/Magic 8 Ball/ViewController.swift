@@ -28,11 +28,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var nameVariable : String = "Peter Mavridis"
         println(nameVariable)
         
+<<<<<<< Updated upstream
         outputText.alpha = 0.0
+=======
+        var EightBall = EightBallModel()
+        /*
+>>>>>>> Stashed changes
         EightBall.responseArray += ["Heck Yes!"]
         EightBall.responseArray += [" Heck No!"]
         EightBall.responseArray += [" Maybe"]
         EightBall.responseArray += [" 💩"]
+        */
         println()
         print("Will I get full marks for this lab?\n")
         EightBall.randomSelector()

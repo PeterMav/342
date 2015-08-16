@@ -21,6 +21,7 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     var temp = " "
     var changeImage = [String]()
     override init () {
+<<<<<<< Updated upstream
         changeImage += ["circle1.png"]
         changeImage += ["circle2.png"]
         changeImage += ["circle3.png"]
@@ -28,6 +29,13 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         changeImage += ["circle5.png"]
         changeImage += ["circle6.png"]
         
+=======
+        //initialResponseArray += ["Nobody knows!"];
+        responseArray += ["Heck Yes!"]
+        responseArray += [" Heck No!"]
+        responseArray += [" Maybe"]
+        responseArray += [" 💩"]
+>>>>>>> Stashed changes
     }
     
     init(extraResponseArray : Array<String>) {
