@@ -12,9 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var inputText: UITextField!
-   
     @IBOutlet weak var circleImage: UIImageView!
-    
     @IBOutlet weak var outputText: UILabel!
     
     override func viewDidLoad() {
@@ -84,10 +82,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         UIView.beginAnimations(nil, context: nil)
         UIView.setAnimationDuration(2)
         outputText.alpha = 1
+        UIView.commitAnimations()
     }
     
     func changeCircle() {
-        circleImage.image = UIImage(named: EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
+        circleImage.image = UIImage(named:
+            EightBall.changeImage[Int(arc4random_uniform(UInt32(EightBall.changeImage.count)))])
     }
     
     func changeLabel() {
