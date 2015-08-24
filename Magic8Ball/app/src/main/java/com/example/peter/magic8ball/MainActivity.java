@@ -20,6 +20,9 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static android.graphics.Color.WHITE;
+import static android.view.View.TEXT_ALIGNMENT_CENTER;
+
 class Magic8BallModel extends Object {
     public Magic8BallModel () {
 
@@ -53,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         eightBall = new Magic8BallModel();
 
         Button shakeButton = new Button(this);
-
         shakeButton.setText("Shake");
         shakeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         RelativeLayout.LayoutParams buttonParams =
@@ -89,7 +91,18 @@ public class MainActivity extends AppCompatActivity {
         imageParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         myLayout.addView(imageView, imageParams);
 
-
+        TextView textView2 = new TextView(this);
+        textView2.setTextColor(WHITE);
+        textView2.setTextSize(24);
+        textView2.setHint("Hello there!");
+        textView2.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams editText2 =
+                new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+        editText2.addRule(RelativeLayout.CENTER_IN_PARENT);
+        editText2.addRule(RelativeLayout.CENTER_IN_PARENT);
+        myLayout.addView(textView2, editText2);
 
         setContentView(myLayout);
 
