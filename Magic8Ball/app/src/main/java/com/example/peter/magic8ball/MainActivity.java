@@ -1,11 +1,19 @@
 package com.example.peter.magic8ball;
 
+import android.app.ActionBar;
 import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -37,9 +45,37 @@ public class MainActivity extends AppCompatActivity {
         String myName = "Peter Mavridis";
         System.out.println(myName);
 
+        LinearLayout ll = (LinearLayout)findViewById(R.layout.activity_main);
+
+
         eightBall = new Magic8BallModel();
 
-        textView2 = (TextView) findViewById(R.id.textView2);
+        Button shakeButton = new Button(this);
+        RelativeLayout myLayout = new RelativeLayout(this);
+        shakeButton.setText("Shake");
+        shakeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams buttonParams =
+                new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        buttonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        buttonParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        myLayout.addView(shakeButton, buttonParams);
+
+
+        EditText editText = new EditText(this);
+        editText.setHint("Ask a question...");
+        editText.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams editParams =
+                new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.MATCH_PARENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+        editParams.addRule(RelativeLayout.CENTER_VERTICAL);
+        editParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        myLayout.addView(editText, editParams);
+
+        setContentView(myLayout);
 
         System.out.println("Will I get full marks for this lab?");
         eightBall.randomSelection();
