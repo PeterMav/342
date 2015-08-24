@@ -1,6 +1,8 @@
 package com.example.peter.magic8ball;
 
 import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,18 +47,18 @@ public class MainActivity extends AppCompatActivity {
         String myName = "Peter Mavridis";
         System.out.println(myName);
 
-        LinearLayout ll = (LinearLayout)findViewById(R.layout.activity_main);
 
+        RelativeLayout myLayout = new RelativeLayout(this);
 
         eightBall = new Magic8BallModel();
 
         Button shakeButton = new Button(this);
-        RelativeLayout myLayout = new RelativeLayout(this);
+
         shakeButton.setText("Shake");
         shakeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         RelativeLayout.LayoutParams buttonParams =
                 new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.MATCH_PARENT,
                         RelativeLayout.LayoutParams.WRAP_CONTENT);
 
         buttonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
@@ -74,6 +76,20 @@ public class MainActivity extends AppCompatActivity {
         editParams.addRule(RelativeLayout.CENTER_VERTICAL);
         editParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
         myLayout.addView(editText, editParams);
+
+        ImageView imageView = new ImageView(this);
+
+        imageView.setImageResource(R.drawable.circle1);
+        imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams imageParams =
+                new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.MATCH_PARENT,
+                        RelativeLayout.LayoutParams.MATCH_PARENT);
+        imageParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+        imageParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+        myLayout.addView(imageView, imageParams);
+
+
 
         setContentView(myLayout);
 
