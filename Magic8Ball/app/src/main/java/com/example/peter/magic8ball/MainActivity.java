@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import static android.graphics.Color.WHITE;
+//import static android.graphics.Color.WHITE;
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
 class Magic8BallModel extends Object {
@@ -55,17 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         eightBall = new Magic8BallModel();
 
-        Button shakeButton = new Button(this);
-        shakeButton.setText("Shake");
-        shakeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
-        RelativeLayout.LayoutParams buttonParams =
-                new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.MATCH_PARENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-        buttonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        buttonParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        myLayout.addView(shakeButton, buttonParams);
 
 
         EditText editText = new EditText(this);
@@ -80,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         myLayout.addView(editText, editParams);
 
         ImageView imageView = new ImageView(this);
-
         imageView.setImageResource(R.drawable.circle1);
         imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         RelativeLayout.LayoutParams imageParams =
@@ -91,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
         imageParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         myLayout.addView(imageView, imageParams);
 
-        TextView textView2 = new TextView(this);
-        textView2.setTextColor(WHITE);
+        textView2 = new TextView(this);
+        textView2.setTextColor(getResources().getColor(R.color.abc_primary_text_material_dark));
         textView2.setTextSize(24);
         textView2.setHint("Hello there!");
         textView2.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
@@ -103,6 +92,31 @@ public class MainActivity extends AppCompatActivity {
         editText2.addRule(RelativeLayout.CENTER_IN_PARENT);
         editText2.addRule(RelativeLayout.CENTER_IN_PARENT);
         myLayout.addView(textView2, editText2);
+
+
+        Button shakeButton = new Button(this);
+        shakeButton.setText("Shake");
+        shakeButton.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        RelativeLayout.LayoutParams buttonParams =
+                new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.MATCH_PARENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        buttonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        buttonParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+
+
+        shakeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
+                selectRandom(v);
+            }
+        });
+
+
+
+        myLayout.addView(shakeButton, buttonParams);
 
         setContentView(myLayout);
 
