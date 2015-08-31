@@ -27,9 +27,10 @@ class Magic8BallModel extends Object {
     public Magic8BallModel () {
 
         responseArray = new String[]{"Heck Yes!", "Heck No!", "Maybe?"};
+        int [] imageArray = new int []{R.drawable.circle1, R.drawable.circle2, R.drawable.circle3, R.drawable.circle4, R.drawable.circle5, R.drawable.circle6};
     }
     public String[] responseArray;
-
+    public String[] imageArray;
     public void randomSelection(){
         System.out.println(responseArray[new Random().nextInt(responseArray.length)]);
     }
@@ -39,6 +40,7 @@ class Magic8BallModel extends Object {
 public class MainActivity extends AppCompatActivity {
     TextView textView2;
     Magic8BallModel eightBall;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         editParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
         myLayout.addView(editText, editParams);
 
-        ImageView imageView = new ImageView(this);
+        imageView = new ImageView(this);
         imageView.setImageResource(R.drawable.circle1);
         imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         RelativeLayout.LayoutParams imageParams =
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
                 selectRandom(v);
+                selectRandomCircle(v);
             }
         });
 
@@ -131,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void selectRandom(View view){
         textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
+    }
+
+    public void selectRandomCircle(View view){
+        Random rand = new Random();
+        int rndInt = rand.nextInt(5) + 1;
+        //String uri = "drawable/circle" + new Integer(rndInt).toString();
+        //String uri = "drawable/circle" + new Integer(5).toString();
+        //int imageResource = getResources().getIdentifier(uri,null,getPackageName());
+        //Drawable image = getResources().getDrawable(imageResource);
+       imageView.setImageResource(R.drawable.circle5);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
