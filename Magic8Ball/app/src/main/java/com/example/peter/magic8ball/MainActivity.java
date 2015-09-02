@@ -139,11 +139,11 @@ public class MainActivity extends AppCompatActivity {
     public void selectRandomCircle(View view){
         Random rand = new Random();
         int rndInt = rand.nextInt(5) + 1;
-        //String uri = "drawable/circle" + new Integer(rndInt).toString();
+        String uri = "drawable/circle" + Integer.toString(rndInt);
         //String uri = "drawable/circle" + new Integer(5).toString();
-        //int imageResource = getResources().getIdentifier(uri,null,getPackageName());
-        //Drawable image = getResources().getDrawable(imageResource);
-       imageView.setImageResource(R.drawable.circle5);
+        int imageResource = getResources().getIdentifier(uri,null,getPackageName());
+        Drawable image = getResources().getDrawable(imageResource);
+        imageView.setImageResource(imageResource);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
