@@ -75,3 +75,14 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         println(responseArray[randomIndex])
     }
 }
+
+
+class QuestionResponseModel {
+    var questionAsked = String()
+    var answer = String()
+    
+    override init () {
+        
+    }
+}
+
