@@ -8,9 +8,9 @@
 
 import UIKit
 var EightBall = EightBallModel()
+var ResponseModel = QuestionResponseModel(coder: NSCoder())
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!
@@ -26,17 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var nameVariable : String = "Peter Mavridis"
         println(nameVariable)
         
-
         outputText.alpha = 0.0
 
-
-        /*
-
-        EightBall.responseArray += ["Heck Yes!"]
-        EightBall.responseArray += [" Heck No!"]
-        EightBall.responseArray += [" Maybe"]
-        EightBall.responseArray += [" 💩"]
-        */
         println()
         print("Will I get full marks for this lab?\n")
         EightBall.randomSelector()
@@ -46,7 +37,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         print("Will I end up becoming a cat person when I get old?\n")
         EightBall.randomSelector()
-        
         
         println(EightBall.description)
 
@@ -62,12 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
-   
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
-        changeLabel()
-        changeCircle()
+        showHistory()
+
     }
     // For the GO button onscreen keyboard.
     func textFieldShouldReturn(inputText: UITextField) -> Bool {
@@ -93,6 +81,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func changeLabel() {
         outputText.text = EightBall.responseArray[Int(arc4random_uniform(UInt32(EightBall.responseArray.count)))]
         fadeIn()
+    }
+    
+    func showHistory(){
+        
+    }
+    
+    func addHistory(){
+//        ResponseModel.questionAsked = inputText as! String
+//        ResponseModel.answer = outputText
     }
 }
 

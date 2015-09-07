@@ -77,12 +77,20 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
 }
 
 
-class QuestionResponseModel {
-    var questionAsked = String()
-    var answer = String()
-    
-    override init () {
+class QuestionResponseModel: NSObject, NSCoding {
+    var questionAsked : String = ""
+    var answer : String = ""
+    var ArrayList : NSMutableArray = []
+    required init(coder aDecoder: NSCoder) {
+        self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
+        self.questionAsked = aDecoder.decodeObjectForKey("answer") as! String
+    }
+    func encodeWithCoder(_aCoder: NSCoder) {
+        _aCoder.encodeObject(self.questionAsked, forKey: "questionAsked")
+        _aCoder.encodeObject(self.answer, forKey:"answer")
         
     }
+    
+   
 }
 
