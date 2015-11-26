@@ -15,7 +15,7 @@
 */
 import UIKit
 
-class EightBallModel: NSObject, CustomStringConvertible, CustomDebugStringConvertible {
+class EightBallModel: NSObject, CustomDebugStringConvertible {
     let initialResponseArray = [String]()
     var responseArray = [String]()
     var temp = " "
