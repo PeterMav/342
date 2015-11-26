@@ -17,30 +17,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
-        println("Peter Mavridis")
+        print("Peter Mavridis")
         
-        var age : Double = 107.392294029
-        print("My age: ")
-        println(String(format: "%.2f", age))
+        let age : Double = 107.392294029
+        print("My age: ", terminator: "")
+        print(String(format: "%.2f", age))
         
-        var nameVariable : String = "Peter Mavridis"
-        println(nameVariable)
+        let nameVariable : String = "Peter Mavridis"
+        print(nameVariable)
         
         outputText.alpha = 0.0
 
-        println()
-        print("Will I get full marks for this lab?\n")
+        print("")
+        print("Will I get full marks for this lab?\n", terminator: "")
         EightBall.randomSelector()
         
-        print("Will the Cronulla Sharks receive a premiership this year?\n")
+        print("Will the Cronulla Sharks receive a premiership this year?\n", terminator: "")
         EightBall.randomSelector()
         
-        print("Will I end up becoming a cat person when I get old?\n")
+        print("Will I end up becoming a cat person when I get old?\n", terminator: "")
         EightBall.randomSelector()
         
-        println(EightBall.description)
+        print(EightBall.description)
 
-        debugPrintln("Debug: \(EightBall.debugDescription)")
+        debugPrint("Debug: \(EightBall.debugDescription)")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         

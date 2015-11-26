@@ -15,7 +15,7 @@
 */
 import UIKit
 
-class EightBallModel: NSObject, Printable, DebugPrintable {
+class EightBallModel: NSObject, CustomStringConvertible, CustomDebugStringConvertible {
     let initialResponseArray = [String]()
     var responseArray = [String]()
     var temp = " "
@@ -46,8 +46,8 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     override var description : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
-        print("=========================\n")
-        print("From description function\n")
+        print("=========================\n", terminator: "")
+        print("From description function\n", terminator: "")
         
         for var i = 0; i < responseArray.count; i++ {
             temp += responseArray[i]
@@ -62,8 +62,8 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
         
         temp.removeAll(keepCapacity: false)// Resests temp to empty
         
-        print("******************************\n")
-        print("From debugDescription function\n")
+        print("******************************\n", terminator: "")
+        print("From debugDescription function\n", terminator: "")
         for var i = 0; i < responseArray.count; i++ {
             temp += responseArray[i]
         }
@@ -72,7 +72,7 @@ class EightBallModel: NSObject, Printable, DebugPrintable {
     
     func randomSelector() {
         let randomIndex = Int(arc4random_uniform(UInt32(responseArray.count)))
-        println(responseArray[randomIndex])
+        print(responseArray[randomIndex])
     }
 }
 
@@ -81,7 +81,7 @@ class QuestionResponseModel: NSObject, NSCoding {
     var questionAsked : String = ""
     var answer : String = ""
     var ArrayList : NSMutableArray = []
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
         self.questionAsked = aDecoder.decodeObjectForKey("answer") as! String
     }
