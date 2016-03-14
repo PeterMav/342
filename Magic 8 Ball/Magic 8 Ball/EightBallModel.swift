@@ -15,7 +15,7 @@
 */
 import UIKit
 
-class EightBallModel: CustomStringConvertible {
+class EightBallModel {
     let initialResponseArray = [String]()
     var responseArray = [String]()
     var temp = " "
@@ -43,32 +43,32 @@ class EightBallModel: CustomStringConvertible {
         
     }
     
-    var description : String {
-        // Use a for loop to create a string based on the elements
-        // inside of response array
-        print("=========================\n")
-        print("From description function\n")
-        
-        for var i = 0; i < responseArray.count; i++ {
-            temp += responseArray[i]
-        }
-        return temp
-    }
-    
-    var debugDescription : String {
-        // Use a for loop to create a string based on the elements
-        // inside of response array
-        // Make sure the string starts with the word "Debug:"
-        
-        temp.removeAll(keepCapacity: false)// Resests temp to empty
-        
-        print("******************************\n")
-        print("From debugDescription function\n")
-        for var i = 0; i < responseArray.count; i++ {
-            temp += responseArray[i]
-        }
-        return temp
-    }
+//    var description : String {
+//        // Use a for loop to create a string based on the elements
+//        // inside of response array
+//        print("=========================\n")
+//        print("From description function\n")
+//        
+//        for var i = 0; i < responseArray.count; i++ {
+//            temp += responseArray[i]
+//        }
+//        return temp
+//    }
+//    
+//    var debugDescription : String {
+//        // Use a for loop to create a string based on the elements
+//        // inside of response array
+//        // Make sure the string starts with the word "Debug:"
+//        
+//        temp.removeAll(keepCapacity: false)// Resests temp to empty
+//        
+//        print("******************************\n")
+//        print("From debugDescription function\n")
+//        for var i = 0; i < responseArray.count; i++ {
+//            temp += responseArray[i]
+//        }
+//        return temp
+//    }
     
     func randomSelector() {
         let randomIndex = Int(arc4random_uniform(UInt32(responseArray.count)))

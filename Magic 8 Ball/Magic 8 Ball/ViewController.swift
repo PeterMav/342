@@ -19,11 +19,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         print("Peter Mavridis")
         
-        var age : Double = 107.392294029
+        let age : Double = 107.392294029
         print("My age: ")
         print(String(format: "%.2f", age))
         
-        var nameVariable : String = "Peter Mavridis"
+        let nameVariable : String = "Peter Mavridis"
         print(nameVariable)
         
 
@@ -37,20 +37,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         EightBall.responseArray += [" Maybe"]
         EightBall.responseArray += [" 💩"]
         */
-        print(())
-        print("Will I get full marks for this lab?\n")
-        EightBall.randomSelector()
+//        print(())
+//        print("Will I get full marks for this lab?\n")
+//        EightBall.randomSelector()
+//        
+//        print("Will the Cronulla Sharks receive a premiership this year?\n")
+//        EightBall.randomSelector()
+//        
+//        print("Will I end up becoming a cat person when I get old?\n")
+//        EightBall.randomSelector()
         
-        print("Will the Cronulla Sharks receive a premiership this year?\n")
-        EightBall.randomSelector()
         
-        print("Will I end up becoming a cat person when I get old?\n")
-        EightBall.randomSelector()
-        
-        
-        print(EightBall.description)
+//        print(EightBall.description)
 
-        debugPrint("Debug: \(EightBall.debugDescription)")
+//        debugPrint("Debug: \(EightBall.debugDescription)")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
