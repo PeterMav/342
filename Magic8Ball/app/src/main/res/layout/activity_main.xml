@@ -21,6 +21,13 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/background"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2" />
+
     <ImageView
         android:layout_width="240dp"
         android:layout_height="240dp"
