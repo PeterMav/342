@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 3/08/2015.
+//  Created by Peter Mavridis on 7/03/2016.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
@@ -17,14 +17,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
-        println("Peter Mavridis")
+        print("Peter Mavridis")
         
         var age : Double = 107.392294029
         print("My age: ")
-        println(String(format: "%.2f", age))
+        print(String(format: "%.2f", age))
         
-        var nameVariable : String = "Peter Mavridis"
-        println(nameVariable)
+        let nameVariable : String = "Peter Mavridis"
+        print(nameVariable)
         
 
         outputText.alpha = 0.0
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         EightBall.responseArray += [" Maybe"]
         EightBall.responseArray += [" 💩"]
         */
-        println()
+        print("")
         print("Will I get full marks for this lab?\n")
         EightBall.randomSelector()
         
@@ -48,9 +48,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         EightBall.randomSelector()
         
         
-        println(EightBall.description)
+        print(EightBall.description)
 
-        debugPrintln("Debug: \(EightBall.debugDescription)")
+        debugPrint("Debug: \(EightBall.debugDescription)")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
