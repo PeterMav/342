@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -14,22 +15,27 @@ class Magic8BallModel extends Object {
     public Magic8BallModel () {
 
         responseArray = new String[]{"Heck Yes!", "Heck No!", "Maybe?"};
+        
     }
     public String[] responseArray;
-
+/*
     public void randomSelection(){
         System.out.println(responseArray[new Random().nextInt(responseArray.length)]);
     }
+    */
 }
 
 
 public class MainActivity extends AppCompatActivity {
     TextView textView2;
+    ImageView imageView2;
+
     Magic8BallModel eightBall;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
         System.out.println("Peter Mavridis");
         double age = 102.48394;
         System.out.printf("My age: %.2f", age);
@@ -37,21 +43,21 @@ public class MainActivity extends AppCompatActivity {
         String myName = "Peter Mavridis";
         System.out.println(myName);
 
-        eightBall = new Magic8BallModel();
-
-        textView2 = (TextView) findViewById(R.id.textView2);
-
         System.out.println("Will I get full marks for this lab?");
         eightBall.randomSelection();
         System.out.println("Will the Cronulla Sharks receive a premiership this year?");
         eightBall.randomSelection();
         System.out.println("Will I end up becoming a cat person when I get old?");
         eightBall.randomSelection();
-
+        */
+        textView2 = (TextView) findViewById(R.id.textView2);
+        imageView2 = (ImageView) findViewById(R.id.imageView2);
+        eightBall = new Magic8BallModel();
 
     }
     public void selectRandom(View view){
         textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
