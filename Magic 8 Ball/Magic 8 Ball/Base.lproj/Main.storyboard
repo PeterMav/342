@@ -15,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uk1-KX-uzW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGh-Ui-YTO">
-                                <rect key="frame" x="28" y="541" width="544" height="43"/>
+                                <rect key="frame" x="24" y="509" width="272" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="xNX-OL-PLE"/>
                                 </constraints>
@@ -34,18 +34,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask a question..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-LX-TUg">
-                                <rect key="frame" x="28" y="20" width="544" height="30"/>
+                                <rect key="frame" x="24" y="20" width="272" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUr-I0-hWe">
-                                <rect key="frame" x="20" y="58" width="560" height="475"/>
+                                <rect key="frame" x="16" y="58" width="288" height="443"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="circle1.png" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-zd-5CS">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="475"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="443"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-4q-3Lb">
-                                        <rect key="frame" x="280" y="238" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="144" y="222" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.80359390332810676" green="0.94418797348484851" blue="0.91363572370018675" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -129,6 +129,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="circleImage" destination="G4z-zd-5CS" id="G13-hW-vOq"/>
                         <outlet property="inputText" destination="ZIS-LX-TUg" id="ADo-rS-esh"/>
