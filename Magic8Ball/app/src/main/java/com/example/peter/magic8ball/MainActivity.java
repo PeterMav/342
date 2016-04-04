@@ -1,15 +1,19 @@
 package com.example.peter.magic8ball;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -52,15 +56,12 @@ public class MainActivity extends AppCompatActivity {
         String myName = "Peter Mavridis";
         System.out.println(myName);
 
-
         RelativeLayout myLayout = new RelativeLayout(this);
 
         eightBall = new Magic8BallModel();
 
-
-
-
-        EditText editText = new EditText(this);
+        final EditText editText = new EditText(this);
+        editText.setSingleLine();
         editText.setHint("Ask a question...");
         editText.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         RelativeLayout.LayoutParams editParams =
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         editParams.addRule(RelativeLayout.CENTER_VERTICAL);
         editParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
         myLayout.addView(editText, editParams);
+        editText.setImeOptions(EditorInfo.IME_ACTION_GO);
 
         imageView = new ImageView(this);
         imageView.setImageResource(R.drawable.circle1);
@@ -112,31 +114,47 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
-                selectRandom(v);
-                selectRandomCircle(v);
+                selectRandom();
+                selectRandomCircle();
             }
         });
 
 
 
+        editText.setOnEditorActionListener(new TextView.OnEditorActionListener(){
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent key) {
+                boolean handled = false;
+                if (actionId == EditorInfo.IME_ACTION_GO){
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                    selectRandom();
+                    selectRandomCircle();
+                    handled = true;
+                }
+                return handled;
+            }
+
+        });
+
         myLayout.addView(shakeButton, buttonParams);
 
         setContentView(myLayout);
 
-        System.out.println("Will I get full marks for this lab?");
-        eightBall.randomSelection();
-        System.out.println("Will the Cronulla Sharks receive a premiership this year?");
-        eightBall.randomSelection();
-        System.out.println("Will I end up becoming a cat person when I get old?");
-        eightBall.randomSelection();
+        //System.out.println("Will I get full marks for this lab?");
+        //eightBall.randomSelection();
+        //System.out.println("Will the Cronulla Sharks receive a premiership this year?");
+        //eightBall.randomSelection();
+        //System.out.println("Will I end up becoming a cat person when I get old?");
+        //eightBall.randomSelection();
 
 
     }
-    public void selectRandom(View view){
+    public void selectRandom(){
         textView2.setText(eightBall.responseArray[new Random().nextInt(eightBall.responseArray.length)]);
     }
 
-    public void selectRandomCircle(View view){
+    public void selectRandomCircle(){
         Random rand = new Random();
         int rndInt = rand.nextInt(5) + 1;
         String uri = "drawable/circle" + Integer.toString(rndInt);
