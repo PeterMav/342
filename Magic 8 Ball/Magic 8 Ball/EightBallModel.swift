@@ -72,6 +72,6 @@ class EightBallModel {
     
     func randomSelector() {
         let randomIndex = Int(arc4random_uniform(UInt32(responseArray.count)))
-        print(responseArray[randomIndex])
+        print(responseArray[randomIndex], terminator: "")
     }
 }
