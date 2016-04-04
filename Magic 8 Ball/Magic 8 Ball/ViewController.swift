@@ -17,14 +17,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
-        print("Peter Mavridis")
-        
-        let age : Double = 107.392294029
-        print("My age: ")
-        print(String(format: "%.2f", age))
-        
-        let nameVariable : String = "Peter Mavridis"
-        print(nameVariable)
+//        print("Peter Mavridis")
+//        
+//        let age : Double = 107.392294029
+//        print("My age: ")
+//        print(String(format: "%.2f", age))
+//        
+//        let nameVariable : String = "Peter Mavridis"
+//        print(nameVariable)
         
 
         outputText.alpha = 0.0

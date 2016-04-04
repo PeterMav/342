@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGh-Ui-YTO">
-                                <rect key="frame" x="24" y="541" width="552" height="43"/>
+                                <rect key="frame" x="28" y="541" width="544" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="xNX-OL-PLE"/>
                                 </constraints>
@@ -33,18 +34,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask a question..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-LX-TUg">
-                                <rect key="frame" x="24" y="16" width="552" height="30"/>
+                                <rect key="frame" x="28" y="20" width="544" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUr-I0-hWe">
-                                <rect key="frame" x="16" y="54" width="568" height="479"/>
+                                <rect key="frame" x="20" y="58" width="560" height="475"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="circle1.png" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-zd-5CS">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="479"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="475"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-4q-3Lb">
-                                        <rect key="frame" x="284" y="240" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="280" y="238" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.80359390332810676" green="0.94418797348484851" blue="0.91363572370018675" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -107,6 +108,7 @@
                             <constraint firstItem="VUr-I0-hWe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="150" id="XNv-F4-EUa"/>
                             <constraint firstAttribute="trailing" secondItem="Uk1-KX-uzW" secondAttribute="trailing" id="YSq-E2-GdP"/>
                             <constraint firstItem="VUr-I0-hWe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ZFa-Rk-giH"/>
+                            <constraint firstItem="ZIS-LX-TUg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="20" id="bah-go-g65"/>
                             <constraint firstItem="ZIS-LX-TUg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="l0z-DK-Iwk"/>
                             <constraint firstAttribute="bottom" secondItem="Uk1-KX-uzW" secondAttribute="bottom" id="sfn-Tc-89t"/>
                             <constraint firstItem="VUr-I0-hWe" firstAttribute="top" secondItem="ZIS-LX-TUg" secondAttribute="bottom" constant="8" id="wca-q2-gec"/>
@@ -114,6 +116,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DDS-wJ-kud"/>
                                 <exclude reference="JFt-MW-sOl"/>
                                 <exclude reference="QUg-vB-tyk"/>
                                 <exclude reference="VGW-Fj-GFf"/>

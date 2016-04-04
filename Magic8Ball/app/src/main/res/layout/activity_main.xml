@@ -43,7 +43,8 @@
         android:background="@drawable/shakebutton"
         android:layout_alignParentEnd="true"
         android:clickable="true"
-        android:onClick="selectRandom" />
+        android:onClick="selectRandom"
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:layout_width="200dp"
@@ -64,7 +65,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
-        android:editable="true"
         android:visibility="visible"
         android:enabled="true" />
 
