@@ -15,7 +15,7 @@
 */
 import UIKit
 
-class EightBallModel: NSObject, CustomDebugStringConvertible {
+class EightBallModel: NSObject {
     let initialResponseArray = [String]()
     var responseArray = [String]()
     var temp = " "
@@ -49,7 +49,7 @@ class EightBallModel: NSObject, CustomDebugStringConvertible {
         print("=========================\n", terminator: "")
         print("From description function\n", terminator: "")
         
-        for var i = 0; i < responseArray.count; i++ {
+        for i in 0 ..< responseArray.count {
             temp += responseArray[i]
         }
         return temp
@@ -64,7 +64,7 @@ class EightBallModel: NSObject, CustomDebugStringConvertible {
         
         print("******************************\n", terminator: "")
         print("From debugDescription function\n", terminator: "")
-        for var i = 0; i < responseArray.count; i++ {
+        for i in 0 ..< responseArray.count {
             temp += responseArray[i]
         }
         return temp
