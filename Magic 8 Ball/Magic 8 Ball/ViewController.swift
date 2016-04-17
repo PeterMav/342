@@ -62,6 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.resignFirstResponder()
         changeLabel()
         changeCircle()
+        addHistory()
         return true
     }
     
@@ -88,6 +89,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func addHistory(){
+        ResponseModel?.questionAsked = inputText.text!
+        ResponseModel?.answer = outputText.text!
 //        ResponseModel.questionAsked = inputText as! String
 //        ResponseModel.answer = outputText
     }
