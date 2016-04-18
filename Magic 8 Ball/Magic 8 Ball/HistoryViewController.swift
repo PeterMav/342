@@ -7,10 +7,11 @@
 //
 
 import UIKit
-var ResponseModel = QuestionResponseModel(coder: NSCoder())
+
 
 class HistoryViewController: UITableViewController {
 
+    var historyList = [QuestionResponseModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,17 +36,10 @@ class HistoryViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return historyList.count
     }
     
-    func showHistory(){
-        
-    }
-    
-    func addHistory(){
-//        ResponseModel?.questionAsked = inputText.text!
-//        ResponseModel?.answer = outputText.text!
-    }
+ 
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -7,10 +7,13 @@
 //
 
 import UIKit
-var EightBall = EightBallModel()
+
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
+    var EightBall = EightBallModel()
+    
+    var historyList = [QuestionResponseModel]()
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!
@@ -55,6 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
 //        showHistory()
+        
 
     }
     // For the GO button onscreen keyboard.
@@ -62,7 +66,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.resignFirstResponder()
         changeLabel()
         changeCircle()
-//        addHistory()
+        let temp = QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!)
+        historyList.append(temp)
         return true
     }
     
