@@ -89,10 +89,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func addHistory(){
+<<<<<<< HEAD
 //        ResponseModel!.questionAsked = inputText as! String
 //        ResponseModel!.answer = outputText
         ResponseModel?.questionAsked = inputText.text!
         
+=======
+        ResponseModel?.questionAsked = inputText.text!
+        ResponseModel?.answer = outputText.text!
+//        ResponseModel.questionAsked = inputText as! String
+//        ResponseModel.answer = outputText
+>>>>>>> origin/lab45
     }
 }
 

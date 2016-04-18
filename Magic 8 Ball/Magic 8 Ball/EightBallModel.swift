@@ -83,7 +83,7 @@ class QuestionResponseModel: NSObject, NSCoding {
     var ArrayList : NSMutableArray = []
     required init?(coder aDecoder: NSCoder) {
         self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
-        self.questionAsked = aDecoder.decodeObjectForKey("answer") as! String
+        self.answer = aDecoder.decodeObjectForKey("answer") as! String
     }
     func encodeWithCoder(_aCoder: NSCoder) {
         _aCoder.encodeObject(self.questionAsked, forKey: "questionAsked")
