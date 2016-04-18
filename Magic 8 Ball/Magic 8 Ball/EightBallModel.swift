@@ -81,6 +81,12 @@ class QuestionResponseModel: NSObject, NSCoding {
     var questionAsked : String = ""
     var answer : String = ""
     var ArrayList : NSMutableArray = []
+    
+    init(questionAsked: String, answer: String){
+        self.questionAsked = questionAsked
+        self.answer = answer
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
         self.answer = aDecoder.decodeObjectForKey("answer") as! String
@@ -91,6 +97,10 @@ class QuestionResponseModel: NSObject, NSCoding {
         
     }
     
+//    required convenience init?(coder aDecoder: NSCoder){
+//        let question = aDecoder.decodeObjectForKey(PropertyKey.questionAsked) as! String
+//        let answer = aDecoder.decodeObjectForKey(PropertyKey.answer) as! String
+//    }
    
 }
 

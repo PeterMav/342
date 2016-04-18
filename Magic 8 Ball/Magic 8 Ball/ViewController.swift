@@ -8,7 +8,7 @@
 
 import UIKit
 var EightBall = EightBallModel()
-var ResponseModel = QuestionResponseModel(coder: NSCoder())
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var inputText: UITextField!
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
-        showHistory()
+//        showHistory()
 
     }
     // For the GO button onscreen keyboard.
@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.resignFirstResponder()
         changeLabel()
         changeCircle()
-        addHistory()
+//        addHistory()
         return true
     }
     
@@ -84,22 +84,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fadeIn()
     }
     
-    func showHistory(){
-        
-    }
     
-    func addHistory(){
-<<<<<<< HEAD
-//        ResponseModel!.questionAsked = inputText as! String
-//        ResponseModel!.answer = outputText
-        ResponseModel?.questionAsked = inputText.text!
-        
-=======
-        ResponseModel?.questionAsked = inputText.text!
-        ResponseModel?.answer = outputText.text!
-//        ResponseModel.questionAsked = inputText as! String
-//        ResponseModel.answer = outputText
->>>>>>> origin/lab45
-    }
+  
+
 }
 
