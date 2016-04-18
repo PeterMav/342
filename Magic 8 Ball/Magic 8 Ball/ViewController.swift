@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 11/04/2015.
+//  Created by Peter Mavridis on 18/04/2016.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
@@ -10,10 +10,9 @@ import UIKit
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    
     var EightBall = EightBallModel()
-    
     var historyList = [QuestionResponseModel]()
+    
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!

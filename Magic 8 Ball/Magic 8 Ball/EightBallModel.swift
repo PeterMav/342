@@ -81,7 +81,6 @@ class QuestionResponseModel: NSObject, NSCoding {
     var questionAsked : String = ""
     var answer : String = ""
     
-    
     init(questionAsked: String, answer: String){
         self.questionAsked = questionAsked
         self.answer = answer
