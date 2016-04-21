@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3039AB191B6F16F700D97751 /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039AB181B6F16F700D97751 /* EightBallModel.swift */; };
 		3039AB1A1B6F16F700D97751 /* EightBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039AB181B6F16F700D97751 /* EightBallModel.swift */; };
+		370B6A8B1CC47F0D00F62B6C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */; };
 		37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0C1B6EF77400726195 /* AppDelegate.swift */; };
 		37752C0F1B6EF77400726195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0E1B6EF77400726195 /* ViewController.swift */; };
 		37752C121B6EF77400726195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37752C101B6EF77400726195 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		3039AB181B6F16F700D97751 /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
+		370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		37752C071B6EF77400726195 /* Magic 8 Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic 8 Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C0B1B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C0C1B6EF77400726195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C0C1B6EF77400726195 /* AppDelegate.swift */,
 				37752C0E1B6EF77400726195 /* ViewController.swift */,
+				370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */,
 				37752C101B6EF77400726195 /* Main.storyboard */,
 				37752C131B6EF77400726195 /* Images.xcassets */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
@@ -254,6 +257,7 @@
 				37752C0F1B6EF77400726195 /* ViewController.swift in Sources */,
 				37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */,
 				3039AB191B6F16F700D97751 /* EightBallModel.swift in Sources */,
+				370B6A8B1CC47F0D00F62B6C /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

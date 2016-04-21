@@ -2,15 +2,17 @@
 //  ViewController.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 3/08/2015.
+//  Created by Peter Mavridis on 18/04/2016.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
 import UIKit
-var EightBall = EightBallModel()
-var ResponseModel = QuestionResponseModel(coder: NSCoder())
-class ViewController: UIViewController, UITextFieldDelegate {
 
+
+class ViewController: UIViewController, UITextFieldDelegate {
+    var EightBall = EightBallModel()
+    var historyList = [QuestionResponseModel]()
+    
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!
@@ -54,6 +56,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
+<<<<<<< HEAD
+=======
+//        showHistory()
+>>>>>>> origin/lab45
         
 
     }
@@ -62,7 +68,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.resignFirstResponder()
         changeLabel()
         changeCircle()
+<<<<<<< HEAD
         
+=======
+        let temp = QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!)
+        historyList.append(temp)
+>>>>>>> origin/lab45
         return true
     }
     
@@ -84,6 +95,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fadeIn()
     }
     
+<<<<<<< HEAD
   
+=======
+    
+  
+
+>>>>>>> origin/lab45
 }
 

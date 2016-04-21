@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 3/08/2015.
+//  Created by Peter Mavridis on 11/04/2015.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 

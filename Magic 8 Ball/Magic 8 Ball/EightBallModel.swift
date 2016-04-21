@@ -2,7 +2,7 @@
 //  EightBallModel.swift
 //  Magic 8 Ball
 //
-//  Created by Peter Mavridis on 3/08/2015.
+//  Created by Peter Mavridis on 11/04/2016.
 //  Copyright (c) 2015 Peter Mavridis. All rights reserved.
 //
 
@@ -80,7 +80,12 @@ class EightBallModel: NSObject {
 class QuestionResponseModel: NSObject, NSCoding {
     var questionAsked : String = ""
     var answer : String = ""
-    var ArrayList : NSMutableArray = []
+    
+    init(questionAsked: String, answer: String){
+        self.questionAsked = questionAsked
+        self.answer = answer
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
         self.answer = aDecoder.decodeObjectForKey("answer") as! String
@@ -91,6 +96,7 @@ class QuestionResponseModel: NSObject, NSCoding {
         
     }
     
+   
    
 }
 
