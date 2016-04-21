@@ -56,10 +56,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // For the shake button on screen
     @IBAction func shakeButtonPressed(sender: AnyObject) {
-<<<<<<< HEAD
-=======
+
+
 //        showHistory()
->>>>>>> origin/lab45
+
         
 
     }
@@ -68,12 +68,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputText.resignFirstResponder()
         changeLabel()
         changeCircle()
-<<<<<<< HEAD
         
-=======
         let temp = QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!)
         historyList.append(temp)
->>>>>>> origin/lab45
         return true
     }
     
@@ -95,12 +92,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         fadeIn()
     }
     
-<<<<<<< HEAD
-  
-=======
-    
-  
 
->>>>>>> origin/lab45
 }
 
