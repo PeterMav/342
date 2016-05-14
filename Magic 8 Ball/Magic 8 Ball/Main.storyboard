@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="l95-cL-UdY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="l95-cL-UdY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask a question here" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-RO-Cpx">
@@ -29,13 +29,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alH-Wq-sM7">
                                 <rect key="frame" x="20" y="64" width="560" height="473"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle1" translatesAutoresizingMaskIntoConstraints="NO" id="oio-jq-G9W">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle1.png" translatesAutoresizingMaskIntoConstraints="NO" id="oio-jq-G9W">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="473"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjL-MR-bSY">
                                         <rect key="frame" x="259" y="226" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.96279248630000003" green="0.97026108190000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -53,7 +53,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="qPG-Ap-sMF"/>
                                 </constraints>
-                                <state key="normal" title="History" backgroundImage="shakeButton"/>
+                                <state key="normal" title="History" backgroundImage="shakeButton.png"/>
                                 <connections>
                                     <segue destination="P8S-WD-q5G" kind="presentation" identifier="showHistoryView" modalTransitionStyle="flipHorizontal" id="GCf-RX-Tjh"/>
                                 </connections>
@@ -164,8 +164,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1080" height="1920"/>
-        <image name="circle1" width="843" height="843"/>
-        <image name="shakeButton" width="1080" height="161"/>
+        <image name="background.png" width="1080" height="1920"/>
+        <image name="circle1.png" width="843" height="843"/>
+        <image name="shakeButton.png" width="1080" height="161"/>
     </resources>
 </document>

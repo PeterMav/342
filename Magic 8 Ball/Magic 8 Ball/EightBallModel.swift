@@ -20,7 +20,7 @@ import AVFoundation
 class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
     let initialResponseArray:[String] = ["Maybe no", "Maybe yes"]
     var responseArray:[String]?
-    var temp = " "
+    
     var changeImage = [String]()
     var soundPlayer: AVAudioPlayer!
     init(){
@@ -35,8 +35,8 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
         // Use a for loop to create a string based on the elements
         // inside of response array
         var element = ""
-        if let responses = responseArray{
-            for response in responses {
+        if let response = responseArray{
+            for response in response {
                 element = element + " " + response
             }
         }
@@ -57,19 +57,10 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
     }
     
     func responseToQuestion(question:String) -> String{
-//        print(question)
-        if let responses = responseArray{
-            let randomNumber = arc4random() % UInt32(responses.count)
-//            print(responses[Int(randomNumber)])
-            playSound("audio"+String(randomNumber), type: "m4a")
-            return responses[Int(randomNumber)]
-        } else {
-            debugPrint("Debug: responseArray is empty")
-            
-            return "response is empty"
-        }
-        
-        
+        let randomIndex = Int(arc4random_uniform(UInt32(responseArray!.count)))
+        let response = responseArray![randomIndex]
+        playSound("sound"+String(randomIndex), type: "mp3")
+        return response
     }
     
     private func playSound(name: String, type: String){

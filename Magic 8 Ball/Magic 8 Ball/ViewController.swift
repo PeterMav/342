@@ -12,11 +12,11 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     var EightBall = EightBallModel()
     var historyList = [QuestionResponseModel]()
-    let eightBall = EightBallModel(extraResponseArray: ["No", "Yes"])
+    let eightBall = EightBallModel(extraResponseArray: ["Who knows", "Energizer"])
     let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
                                                     NSSearchPathDomainMask.UserDomainMask,
                                                     true)[0] as AnyObject
-    var filePath:String = ""
+    var file:String = ""
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!
@@ -27,10 +27,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        filePath = path.stringByAppendingPathComponent("historydata")
+        file = path.stringByAppendingPathComponent("historydata")
         
         // Retrieve and save
-        if let historyData = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? [QuestionResponseModel] {
+        if let historyData = NSKeyedUnarchiver.unarchiveObjectWithFile(file) as? [QuestionResponseModel] {
             for data in historyData{
                 historyList.append(QuestionResponseModel(questionAsked: data.question, answer: data.answer))
             }
@@ -44,21 +44,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func getAnswer(sender:AnyObject) {
         circleImage.alpha = 0
+        outputText.alpha = 0
         let imagedName = "circle" + String(arc4random() % UInt32(6) + 1)
         
         circleImage.image = UIImage(named: imagedName)
         
         UIImageView.animateWithDuration(0.5, animations: {
             self.circleImage.alpha = 1
+            self.outputText.alpha = 1
         })
+        
+        
         outputText.text = eightBall.responseToQuestion(inputText.text!)
-        
-        
-        // Append question and answer to historList
+        print(outputText.text!)
         historyList.append(QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!))
-        
-        // Save to filepath
-        NSKeyedArchiver.archiveRootObject(historyList, toFile: filePath)
+        NSKeyedArchiver.archiveRootObject(historyList, toFile: file)
         
     }
     
@@ -72,7 +72,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(inputText: UITextField) -> Bool {
         inputText.resignFirstResponder()
         getAnswer(inputText)
-        
         return true
     }
     
