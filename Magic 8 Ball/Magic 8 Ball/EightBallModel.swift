@@ -18,11 +18,13 @@ import Foundation
 import AVFoundation
 
 class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
-    let initialResponseArray:[String] = ["Maybe no", "Maybe yes"]
+    let initialResponseArray:[String] = [NSLocalizedString("response0", comment: "response"), NSLocalizedString("response1", comment: "response")]
+    let extraResponseArray:[String] = [NSLocalizedString("response2", comment: "response"), NSLocalizedString("response3", comment: "response")]
     var responseArray:[String]?
     
     var changeImage = [String]()
     var soundPlayer: AVAudioPlayer!
+    let ss = AVSpeechSynthesizer()
     init(){
         responseArray = initialResponseArray
     }
@@ -56,19 +58,16 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
         return element
     }
     
-    func responseToQuestion(question:String) -> String{
+    func responseToQuestion() -> Int{
         let randomIndex = Int(arc4random_uniform(UInt32(responseArray!.count)))
-        let response = responseArray![randomIndex]
-        playSound("sound"+String(randomIndex), type: "mp3")
-        return response
+        return randomIndex
     }
     
-    private func playSound(name: String, type: String){
-        if let path = NSBundle.mainBundle().pathForResource(name, ofType: type) {
-            let responseSoundURL = NSURL.fileURLWithPath(path)
-            soundPlayer = try! AVAudioPlayer(contentsOfURL: responseSoundURL)
-        }
-        soundPlayer.play()
+    func playSound(numb:Int){
+        let speechText = NSLocalizedString("response"+String(numb), comment: "response")
+        let su = AVSpeechUtterance(string: speechText)
+        ss.speakUtterance(su)
+
     }
     
 //    func randomSelector() {

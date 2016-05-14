@@ -12,7 +12,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     var EightBall = EightBallModel()
     var historyList = [QuestionResponseModel]()
-    let eightBall = EightBallModel(extraResponseArray: ["Who knows", "Energizer"])
+    let eightBall = EightBallModel(extraResponseArray: [NSLocalizedString("response2", comment: "response"), NSLocalizedString("response3", comment: "response")])
     let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
                                                     NSSearchPathDomainMask.UserDomainMask,
                                                     true)[0] as AnyObject
@@ -54,9 +54,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.outputText.alpha = 1
         })
         
-        
-        outputText.text = eightBall.responseToQuestion(inputText.text!)
+        let randomIndex = eightBall.responseToQuestion()
+        outputText.text = eightBall.responseArray![Int(randomIndex)]
         print(outputText.text!)
+        eightBall.playSound(randomIndex)
         historyList.append(QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!))
         NSKeyedArchiver.archiveRootObject(historyList, toFile: file)
         
@@ -74,7 +75,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         getAnswer(inputText)
         return true
     }
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 //    func fadeIn() {
 //        outputText.alpha = 0
 //        UIView.beginAnimations(nil, context: nil)

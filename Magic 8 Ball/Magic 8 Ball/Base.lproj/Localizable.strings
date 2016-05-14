@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Magic 8 Ball
+
+  Created by Peter Mavridis on 15/05/2016.
+  Copyright © 2016 Peter Mavridis. All rights reserved.
+*/
+
+// Magic 8 Model
+"response0"="Maybe No";
+"response1"="Maybe yes";
+"response2" = "Who knows";
+"response3" = "Energizer";
+// ViewController
+//HistoryViewController
+"historyList" = "History";

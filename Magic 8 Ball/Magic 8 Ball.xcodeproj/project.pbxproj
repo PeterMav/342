@@ -35,6 +35,8 @@
 		D060ED9A1CE759D40086C3BB /* sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED981CE759D40086C3BB /* sound3.mp3 */; };
 		D060ED9C1CE759DD0086C3BB /* sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED9B1CE759DD0086C3BB /* sound2.mp3 */; };
 		D060ED9D1CE759DD0086C3BB /* sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED9B1CE759DD0086C3BB /* sound2.mp3 */; };
+		D060EDA21CE76BFC0086C3BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D060EDA51CE76BFC0086C3BB /* Localizable.strings */; };
+		D060EDA31CE76BFC0086C3BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D060EDA51CE76BFC0086C3BB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		D060ED911CE756FF0086C3BB /* sound0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound0.mp3; sourceTree = "<group>"; };
 		D060ED981CE759D40086C3BB /* sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound3.mp3; sourceTree = "<group>"; };
 		D060ED9B1CE759DD0086C3BB /* sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound2.mp3; sourceTree = "<group>"; };
+		D060ED9E1CE769250086C3BB /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D060EDA41CE76BFC0086C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D060EDA61CE76C000086C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D060EDA71CE76C020086C3BB /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */,
 				D060ED831CE730840086C3BB /* QuestionResponseModel.swift */,
 				D060ED851CE735B80086C3BB /* Main.storyboard */,
+				D060EDA51CE76BFC0086C3BB /* Localizable.strings */,
 				37752C131B6EF77400726195 /* Images.xcassets */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
 				37752C0A1B6EF77400726195 /* Supporting Files */,
@@ -242,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
 			);
 			mainGroup = 37752BFE1B6EF77400726195;
 			productRefGroup = 37752C081B6EF77400726195 /* Products */;
@@ -272,6 +280,7 @@
 				D02521EB1B80A40C004B0236 /* background.png in Resources */,
 				D02521F01B80A40C004B0236 /* circle5.png in Resources */,
 				37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */,
+				D060EDA21CE76BFC0086C3BB /* Localizable.strings in Resources */,
 				D060ED991CE759D40086C3BB /* sound3.mp3 in Resources */,
 				37752C141B6EF77400726195 /* Images.xcassets in Resources */,
 			);
@@ -281,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D060EDA31CE76BFC0086C3BB /* Localizable.strings in Resources */,
 				D060ED9A1CE759D40086C3BB /* sound3.mp3 in Resources */,
 				D060ED931CE756FF0086C3BB /* sound1.mp3 in Resources */,
 				D060ED9D1CE759DD0086C3BB /* sound2.mp3 in Resources */,
@@ -327,8 +337,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				37752C161B6EF77400726195 /* Base */,
+				D060ED9E1CE769250086C3BB /* el */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D060EDA51CE76BFC0086C3BB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D060EDA41CE76BFC0086C3BB /* Base */,
+				D060EDA61CE76C000086C3BB /* en */,
+				D060EDA71CE76C020086C3BB /* el */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
