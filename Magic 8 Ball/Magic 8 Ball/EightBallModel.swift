@@ -66,6 +66,8 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
     func playSound(numb:Int){
         let speechText = NSLocalizedString("response"+String(numb), comment: "response")
         let su = AVSpeechUtterance(string: speechText)
+        su.pitchMultiplier = 1.3
+        su.rate = AVSpeechUtteranceMaximumSpeechRate * 0.4
         ss.speakUtterance(su)
 
     }

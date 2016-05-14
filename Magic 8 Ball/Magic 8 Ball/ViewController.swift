@@ -75,9 +75,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         getAnswer(inputText)
         return true
     }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
 //    func fadeIn() {
 //        outputText.alpha = 0
 //        UIView.beginAnimations(nil, context: nil)
