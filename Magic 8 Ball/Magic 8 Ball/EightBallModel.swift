@@ -15,88 +15,66 @@
 */
 import UIKit
 
-class EightBallModel: NSObject {
-    let initialResponseArray = [String]()
-    var responseArray = [String]()
+class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
+    let initialResponseArray:[String] = ["Maybe no", "Maybe yes"]
+    var responseArray:[String]?
     var temp = " "
     var changeImage = [String]()
-    override init () {
-
-        changeImage += ["circle1.png"]
-        changeImage += ["circle2.png"]
-        changeImage += ["circle3.png"]
-        changeImage += ["circle4.png"]
-        changeImage += ["circle5.png"]
-        changeImage += ["circle6.png"]
-        
-
-        //initialResponseArray += ["Nobody knows!"];
-        responseArray += ["Heck Yes!"]
-        responseArray += [" Heck No!"]
-        responseArray += [" Maybe"]
-        responseArray += [" 💩"]
-
+    
+    init(){
+        responseArray = initialResponseArray
     }
     
-    init(extraResponseArray : Array<String>) {
-        
-        
+    init(extraResponseArray:[String]) {
+        responseArray = initialResponseArray + extraResponseArray
     }
     
-    override var description : String {
+    var description : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
-        print("=========================\n", terminator: "")
-        print("From description function\n", terminator: "")
-        
-        for i in 0 ..< responseArray.count {
-            temp += responseArray[i]
+        var element = ""
+        if let responses = responseArray{
+            for response in responses {
+                element = element + " " + response
+            }
         }
-        return temp
+        return element
     }
     
-    override var debugDescription : String {
+    var debugDescription : String {
         // Use a for loop to create a string based on the elements
         // inside of response array
         // Make sure the string starts with the word "Debug:"
-        
-        temp.removeAll(keepCapacity: false)// Resests temp to empty
-        
-        print("******************************\n", terminator: "")
-        print("From debugDescription function\n", terminator: "")
-        for i in 0 ..< responseArray.count {
-            temp += responseArray[i]
+        var element = "Debug:"
+        if let responses = responseArray{
+            for response in responses {
+                element = element + " " + response
+            }
         }
-        return temp
+        return element
     }
     
-    func randomSelector() {
-        let randomIndex = Int(arc4random_uniform(UInt32(responseArray.count)))
-        print(responseArray[randomIndex])
-    }
-}
-
-
-class QuestionResponseModel: NSObject, NSCoding {
-    var questionAsked : String = ""
-    var answer : String = ""
-    
-    init(questionAsked: String, answer: String){
-        self.questionAsked = questionAsked
-        self.answer = answer
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.questionAsked = aDecoder.decodeObjectForKey("questionAsked") as! String
-        self.answer = aDecoder.decodeObjectForKey("answer") as! String
-    }
-    func encodeWithCoder(_aCoder: NSCoder) {
-        _aCoder.encodeObject(self.questionAsked, forKey: "questionAsked")
-        _aCoder.encodeObject(self.answer, forKey:"answer")
+    func responseToQuestion(question:String) -> String{
+        print(question)
+        if let responses = responseArray{
+            let randomNumber = arc4random() % UInt32(responses.count)
+            print(responses[Int(randomNumber)])
+            
+            return responses[Int(randomNumber)]
+        } else {
+            debugPrint("Debug: responseArray is empty")
+            
+            return "response is empty"
+        }
+        
         
     }
     
-   
-   
+//    func randomSelector() {
+//        let randomIndex = Int(arc4random_uniform(UInt32(responseArray!.count)))
+//        print(responseArray![randomIndex])
+//    }
 }
+
+
 
