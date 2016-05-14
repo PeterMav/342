@@ -14,13 +14,15 @@
 
 */
 import UIKit
+import Foundation
+import AVFoundation
 
 class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
     let initialResponseArray:[String] = ["Maybe no", "Maybe yes"]
     var responseArray:[String]?
     var temp = " "
     var changeImage = [String]()
-    
+    var soundPlayer: AVAudioPlayer!
     init(){
         responseArray = initialResponseArray
     }
@@ -55,11 +57,11 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
     }
     
     func responseToQuestion(question:String) -> String{
-        print(question)
+//        print(question)
         if let responses = responseArray{
             let randomNumber = arc4random() % UInt32(responses.count)
-            print(responses[Int(randomNumber)])
-            
+//            print(responses[Int(randomNumber)])
+            playSound("audio"+String(randomNumber), type: "m4a")
             return responses[Int(randomNumber)]
         } else {
             debugPrint("Debug: responseArray is empty")
@@ -68,6 +70,14 @@ class EightBallModel: CustomStringConvertible, CustomDebugStringConvertible {
         }
         
         
+    }
+    
+    private func playSound(name: String, type: String){
+        if let path = NSBundle.mainBundle().pathForResource(name, ofType: type) {
+            let responseSoundURL = NSURL.fileURLWithPath(path)
+            soundPlayer = try! AVAudioPlayer(contentsOfURL: responseSoundURL)
+        }
+        soundPlayer.play()
     }
     
 //    func randomSelector() {
