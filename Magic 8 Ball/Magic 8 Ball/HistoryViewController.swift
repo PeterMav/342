@@ -12,8 +12,7 @@ import UIKit
 class HistoryViewController: UIViewController, UITableViewDelegate {
 
     
-    @IBOutlet weak var navigationTitle: UINavigationBar!
-    
+    @IBOutlet weak var navigationTitle: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     var historyList = [QuestionResponseModel]()
     override func viewDidLoad() {
@@ -21,13 +20,17 @@ class HistoryViewController: UIViewController, UITableViewDelegate {
             if success{
                 self.historyList = data!
                 self.tableView.reloadData()
-                print("success")
+                print("Success")
             } else {
-                print("failed")
+                print("Failed")
             }
         }
         super.viewDidLoad()
-
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        navigationTitle.title = NSLocalizedString("historyList", comment: "history")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,15 +56,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate {
         let row = indexPath.row
         cell.answer?.text = historyList[row].answer
         cell.question?.text = historyList[row].question
-        cell.user?.image = historyList[row].image as? String
-//        cell.textLabel?.text = historyList[row].question
-//        cell.detailTextLabel?.text = historyList[row].answer
+    
         if let url = NSURL(string: historyList[row].image!){
             let session = NSURLSession.sharedSession()
             session.dataTaskWithURL(url, completionHandler: {(data,response,error) in
                 if let e = error {
-                    print("error with image url \(e.localizedDescription)")
-                } else if let d = data, image = UIImage(data: d) {
+                    print("Error \(e.localizedDescription)")
+                } else if let data = data, image = UIImage(data: data) {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         cell.user.image = image
                     })

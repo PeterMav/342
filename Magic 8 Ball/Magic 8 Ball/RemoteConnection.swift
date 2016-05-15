@@ -14,9 +14,9 @@ class RemoteConnection:NSObject {
     
     
     let URL = "http://li859-75.members.linode.com/"
-    let user = "pm554"
+    let userName = "pm554"
     
-    private func dataTask(request: NSMutableURLRequest, method: String, completion: (success: Bool, data: AnyObject?) -> ()) {
+    func dataTask(request: NSMutableURLRequest, method: String, completion: (success: Bool, data: AnyObject?) -> ()) {
         request.HTTPMethod = method
         
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
@@ -30,7 +30,7 @@ class RemoteConnection:NSObject {
             }.resume()
     }
     
-    private func clientURLRequest(path: String, parameter: Dictionary<String, String>? = nil) -> NSMutableURLRequest {
+    func clientURLRequest(path: String, parameter: Dictionary<String, String>? = nil) -> NSMutableURLRequest {
         
         let urlComponents = NSURLComponents(string: URL+path)!
         
@@ -67,7 +67,7 @@ class RemoteConnection:NSObject {
         get(clientURLRequest(url, parameter: nil)) { (success, data) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if success {
-                    var history = [QuestionResponseModel]()
+                    var historyList = [QuestionResponseModel]()
                     
                     let json = try? NSJSONSerialization.JSONObjectWithData(data as! NSData, options: [])
                     if let data = json as? NSMutableArray{
@@ -76,11 +76,11 @@ class RemoteConnection:NSObject {
                             let answer = result.valueForKey("answer") as! String
                             let image = result.valueForKey("imageURL") as! String
                             
-                            history.append(QuestionResponseModel(question: question, answer: answer, image: image))
+                            historyList.append(QuestionResponseModel(question: question, answer: answer, image: image))
                             //}
                         }
                     }
-                    completion(success: true, data: history)
+                    completion(success: true, data: historyList)
                 } else {
                     completion(success: false, data: nil)
                 }
@@ -90,7 +90,7 @@ class RemoteConnection:NSObject {
     
     func addEntry(question:String, answer:String, completion: (success:Bool) -> Void){
         let parameter:Dictionary = [
-            "username"	:	user,
+            "username"	:	userName,
             "question"	:	question,
             "answer"	:	answer
         ]

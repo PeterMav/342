@@ -14,7 +14,6 @@
 		37752C0F1B6EF77400726195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0E1B6EF77400726195 /* ViewController.swift */; };
 		37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37752C151B6EF77400726195 /* LaunchScreen.xib */; };
 		37752C231B6EF77400726195 /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C221B6EF77400726195 /* Magic_8_BallTests.swift */; };
-		D00B35C61CE8097B0090C819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00B35C51CE8097B0090C819 /* Main.storyboard */; };
 		D00B35C81CE80A2A0090C819 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */; };
 		D00B35CA1CE80ED50090C819 /* RemoteConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C91CE80ED50090C819 /* RemoteConnection.swift */; };
 		D02521EB1B80A40C004B0236 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E31B80A40C004B0236 /* background.png */; };
@@ -38,6 +37,7 @@
 		D060ED9D1CE759DD0086C3BB /* sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED9B1CE759DD0086C3BB /* sound2.mp3 */; };
 		D060EDA21CE76BFC0086C3BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D060EDA51CE76BFC0086C3BB /* Localizable.strings */; };
 		D060EDA31CE76BFC0086C3BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D060EDA51CE76BFC0086C3BB /* Localizable.strings */; };
+		D08B685D1CE82EC80036728E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08B685F1CE82EC80036728E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 		37752C1C1B6EF77400726195 /* Magic 8 BallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic 8 BallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C211B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C221B6EF77400726195 /* Magic_8_BallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallTests.swift; sourceTree = "<group>"; };
-		D00B35C51CE8097B0090C819 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Magic 8 Ball/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 		D00B35C91CE80ED50090C819 /* RemoteConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConnection.swift; sourceTree = "<group>"; };
 		D02521E31B80A40C004B0236 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		D060EDA41CE76BFC0086C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D060EDA61CE76C000086C3BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D060EDA71CE76C020086C3BB /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D08B685E1CE82EC80036728E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 				D02521E91B80A40C004B0236 /* circle6.png */,
 				37752C0C1B6EF77400726195 /* AppDelegate.swift */,
 				D00B35C91CE80ED50090C819 /* RemoteConnection.swift */,
-				D00B35C51CE8097B0090C819 /* Main.storyboard */,
+				D08B685F1CE82EC80036728E /* Main.storyboard */,
 				D060EDA51CE76BFC0086C3BB /* Localizable.strings */,
 				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
@@ -299,7 +299,7 @@
 				D02521EF1B80A40C004B0236 /* circle4.png in Resources */,
 				D02521EB1B80A40C004B0236 /* background.png in Resources */,
 				D02521F01B80A40C004B0236 /* circle5.png in Resources */,
-				D00B35C61CE8097B0090C819 /* Main.storyboard in Resources */,
+				D08B685D1CE82EC80036728E /* Main.storyboard in Resources */,
 				37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */,
 				D060EDA21CE76BFC0086C3BB /* Localizable.strings in Resources */,
 				D060ED991CE759D40086C3BB /* sound3.mp3 in Resources */,
@@ -372,6 +372,14 @@
 				D060EDA71CE76C020086C3BB /* el */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D08B685F1CE82EC80036728E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08B685E1CE82EC80036728E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
