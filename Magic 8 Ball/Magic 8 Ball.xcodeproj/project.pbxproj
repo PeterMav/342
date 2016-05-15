@@ -12,9 +12,11 @@
 		370B6A8B1CC47F0D00F62B6C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */; };
 		37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0C1B6EF77400726195 /* AppDelegate.swift */; };
 		37752C0F1B6EF77400726195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C0E1B6EF77400726195 /* ViewController.swift */; };
-		37752C141B6EF77400726195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37752C131B6EF77400726195 /* Images.xcassets */; };
 		37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37752C151B6EF77400726195 /* LaunchScreen.xib */; };
 		37752C231B6EF77400726195 /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C221B6EF77400726195 /* Magic_8_BallTests.swift */; };
+		D00B35C61CE8097B0090C819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00B35C51CE8097B0090C819 /* Main.storyboard */; };
+		D00B35C81CE80A2A0090C819 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */; };
+		D00B35CA1CE80ED50090C819 /* RemoteConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C91CE80ED50090C819 /* RemoteConnection.swift */; };
 		D02521EB1B80A40C004B0236 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E31B80A40C004B0236 /* background.png */; };
 		D02521EC1B80A40C004B0236 /* circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E41B80A40C004B0236 /* circle1.png */; };
 		D02521ED1B80A40C004B0236 /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E51B80A40C004B0236 /* circle2.png */; };
@@ -24,7 +26,6 @@
 		D02521F11B80A40C004B0236 /* circle6.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E91B80A40C004B0236 /* circle6.png */; };
 		D02521F21B80A40C004B0236 /* shakeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521EA1B80A40C004B0236 /* shakeButton.png */; };
 		D060ED841CE730840086C3BB /* QuestionResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D060ED831CE730840086C3BB /* QuestionResponseModel.swift */; };
-		D060ED861CE735B80086C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D060ED851CE735B80086C3BB /* Main.storyboard */; };
 		D060ED921CE756FF0086C3BB /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED901CE756FF0086C3BB /* sound1.mp3 */; };
 		D060ED931CE756FF0086C3BB /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED901CE756FF0086C3BB /* sound1.mp3 */; };
 		D060ED941CE756FF0086C3BB /* sound0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D060ED911CE756FF0086C3BB /* sound0.mp3 */; };
@@ -50,17 +51,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3039AB181B6F16F700D97751 /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightBallModel.swift; sourceTree = "<group>"; };
-		370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3039AB181B6F16F700D97751 /* EightBallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EightBallModel.swift; path = "Magic 8 Ball/EightBallModel.swift"; sourceTree = "<group>"; };
+		370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "Magic 8 Ball/HistoryViewController.swift"; sourceTree = "<group>"; };
 		37752C071B6EF77400726195 /* Magic 8 Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic 8 Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C0B1B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C0C1B6EF77400726195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37752C0E1B6EF77400726195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		37752C131B6EF77400726195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37752C0E1B6EF77400726195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Magic 8 Ball/ViewController.swift"; sourceTree = "<group>"; };
 		37752C161B6EF77400726195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		37752C1C1B6EF77400726195 /* Magic 8 BallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic 8 BallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37752C211B6EF77400726195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37752C221B6EF77400726195 /* Magic_8_BallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallTests.swift; sourceTree = "<group>"; };
+		D00B35C51CE8097B0090C819 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Magic 8 Ball/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
+		D00B35C91CE80ED50090C819 /* RemoteConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConnection.swift; sourceTree = "<group>"; };
 		D02521E31B80A40C004B0236 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		D02521E41B80A40C004B0236 /* circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle1.png; sourceTree = "<group>"; };
 		D02521E51B80A40C004B0236 /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
@@ -69,8 +72,7 @@
 		D02521E81B80A40C004B0236 /* circle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle5.png; sourceTree = "<group>"; };
 		D02521E91B80A40C004B0236 /* circle6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle6.png; sourceTree = "<group>"; };
 		D02521EA1B80A40C004B0236 /* shakeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeButton.png; sourceTree = "<group>"; };
-		D060ED831CE730840086C3BB /* QuestionResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponseModel.swift; sourceTree = "<group>"; };
-		D060ED851CE735B80086C3BB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D060ED831CE730840086C3BB /* QuestionResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionResponseModel.swift; path = "Magic 8 Ball/QuestionResponseModel.swift"; sourceTree = "<group>"; };
 		D060ED8E1CE754150086C3BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D060ED901CE756FF0086C3BB /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		D060ED911CE756FF0086C3BB /* sound0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound0.mp3; sourceTree = "<group>"; };
@@ -124,6 +126,8 @@
 		37752C091B6EF77400726195 /* Magic 8 Ball */ = {
 			isa = PBXGroup;
 			children = (
+				D00B35CC1CE81D3F0090C819 /* Model */,
+				D00B35CB1CE81D170090C819 /* Controller */,
 				D060ED8B1CE74C570086C3BB /* Audio */,
 				D02521E31B80A40C004B0236 /* background.png */,
 				D02521E41B80A40C004B0236 /* circle1.png */,
@@ -132,17 +136,13 @@
 				D02521E71B80A40C004B0236 /* circle4.png */,
 				D02521E81B80A40C004B0236 /* circle5.png */,
 				D02521E91B80A40C004B0236 /* circle6.png */,
-				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C0C1B6EF77400726195 /* AppDelegate.swift */,
-				37752C0E1B6EF77400726195 /* ViewController.swift */,
-				370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */,
-				D060ED831CE730840086C3BB /* QuestionResponseModel.swift */,
-				D060ED851CE735B80086C3BB /* Main.storyboard */,
+				D00B35C91CE80ED50090C819 /* RemoteConnection.swift */,
+				D00B35C51CE8097B0090C819 /* Main.storyboard */,
 				D060EDA51CE76BFC0086C3BB /* Localizable.strings */,
-				37752C131B6EF77400726195 /* Images.xcassets */,
+				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
 				37752C0A1B6EF77400726195 /* Supporting Files */,
-				3039AB181B6F16F700D97751 /* EightBallModel.swift */,
 			);
 			path = "Magic 8 Ball";
 			sourceTree = "<group>";
@@ -170,6 +170,27 @@
 				37752C211B6EF77400726195 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D00B35CB1CE81D170090C819 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37752C0E1B6EF77400726195 /* ViewController.swift */,
+				370B6A8A1CC47F0D00F62B6C /* HistoryViewController.swift */,
+				D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D00B35CC1CE81D3F0090C819 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3039AB181B6F16F700D97751 /* EightBallModel.swift */,
+				D060ED831CE730840086C3BB /* QuestionResponseModel.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D060ED8B1CE74C570086C3BB /* Audio */ = {
@@ -273,16 +294,15 @@
 				D02521F21B80A40C004B0236 /* shakeButton.png in Resources */,
 				D02521EC1B80A40C004B0236 /* circle1.png in Resources */,
 				D02521EE1B80A40C004B0236 /* circle3.png in Resources */,
-				D060ED861CE735B80086C3BB /* Main.storyboard in Resources */,
 				D060ED9C1CE759DD0086C3BB /* sound2.mp3 in Resources */,
 				D060ED921CE756FF0086C3BB /* sound1.mp3 in Resources */,
 				D02521EF1B80A40C004B0236 /* circle4.png in Resources */,
 				D02521EB1B80A40C004B0236 /* background.png in Resources */,
 				D02521F01B80A40C004B0236 /* circle5.png in Resources */,
+				D00B35C61CE8097B0090C819 /* Main.storyboard in Resources */,
 				37752C171B6EF77400726195 /* LaunchScreen.xib in Resources */,
 				D060EDA21CE76BFC0086C3BB /* Localizable.strings in Resources */,
 				D060ED991CE759D40086C3BB /* sound3.mp3 in Resources */,
-				37752C141B6EF77400726195 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00B35C81CE80A2A0090C819 /* HistoryTableViewCell.swift in Sources */,
 				37752C0F1B6EF77400726195 /* ViewController.swift in Sources */,
 				37752C0D1B6EF77400726195 /* AppDelegate.swift in Sources */,
 				3039AB191B6F16F700D97751 /* EightBallModel.swift in Sources */,
 				370B6A8B1CC47F0D00F62B6C /* HistoryViewController.swift in Sources */,
+				D00B35CA1CE80ED50090C819 /* RemoteConnection.swift in Sources */,
 				D060ED841CE730840086C3BB /* QuestionResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -430,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -444,6 +466,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Magic 8 Ball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +481,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Magic 8 Ball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

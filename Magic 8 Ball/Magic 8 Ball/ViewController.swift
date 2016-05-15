@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var outputText: UILabel!
     
+    @IBOutlet weak var historyButton: UIButton!
     override func viewDidLoad() {
         
         outputText.alpha = 0.0
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Retrieve and save
         if let historyData = NSKeyedUnarchiver.unarchiveObjectWithFile(file) as? [QuestionResponseModel] {
             for data in historyData{
-                historyList.append(QuestionResponseModel(questionAsked: data.question, answer: data.answer))
+                historyList.append(QuestionResponseModel(question: data.question, answer: data.answer))
             }
         }
         // For the GO button onscreen keyboard
@@ -41,6 +42,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewDidAppear(animated: Bool) {
+        historyButton.setTitle(NSLocalizedString("history", comment: "history"), forState: .Normal)
     }
     func getAnswer(sender:AnyObject) {
         circleImage.alpha = 0
@@ -56,9 +60,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let randomIndex = eightBall.responseToQuestion()
         outputText.text = eightBall.responseArray![Int(randomIndex)]
-        print(outputText.text!)
+        
+        let question = inputText.text!
+        let answer = outputText.text!
+        
         eightBall.playSound(randomIndex)
-        historyList.append(QuestionResponseModel(questionAsked: inputText.text!, answer: outputText.text!))
+        RemoteConnection().addEntry(question, answer: answer) { (success) in
+            if success {
+                print("Success")
+            }else{
+                print("Failure")
+            }
+        }
+        
+        historyList.append(QuestionResponseModel(question: inputText.text!, answer: outputText.text!))
         NSKeyedArchiver.archiveRootObject(historyList, toFile: file)
         
     }

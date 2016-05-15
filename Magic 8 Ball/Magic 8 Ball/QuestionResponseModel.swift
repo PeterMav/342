@@ -11,10 +11,12 @@ import Foundation
 class QuestionResponseModel: NSObject, NSCoding{
     var question: String
     var answer: String
+    var image: String?
     
-    init(questionAsked:String, answer:String){
-        self.question = questionAsked
+    init(question:String, answer:String, image:String? = nil){
+        self.question = question
         self.answer = answer
+        self.image = image
     }
     
     required convenience init(coder decoder: NSCoder) {
@@ -22,7 +24,7 @@ class QuestionResponseModel: NSObject, NSCoding{
         let question = decoder.decodeObjectForKey("question") as! String
         let answer = decoder.decodeObjectForKey("answer") as! String
         
-        self.init(questionAsked:question, answer: answer)
+        self.init(question:question, answer: answer)
     }
     
     func encodeWithCoder(coder: NSCoder) {
