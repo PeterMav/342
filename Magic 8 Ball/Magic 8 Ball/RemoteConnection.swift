@@ -75,9 +75,8 @@ class RemoteConnection:NSObject {
                             let question = result.valueForKey("question") as! String
                             let answer = result.valueForKey("answer") as! String
                             let image = result.valueForKey("imageURL") as! String
-                            
+//                            print(image)
                             historyList.append(QuestionResponseModel(question: question, answer: answer, image: image))
-                            //}
                         }
                     }
                     completion(success: true, data: historyList)
@@ -98,8 +97,8 @@ class RemoteConnection:NSObject {
         let url = "addEntry.php"
         
         post(clientURLRequest(url, parameter: parameter)) { (success, data) -> () in
-            let resultString:String = NSString(data: data as! NSData, encoding:NSUTF8StringEncoding)! as String
-            print(resultString)
+            let result:String = NSString(data: data as! NSData, encoding:NSUTF8StringEncoding)! as String
+            print(result)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 completion(success: success)
             })

@@ -56,20 +56,21 @@ class HistoryViewController: UIViewController, UITableViewDelegate {
         let row = indexPath.row
         cell.answer?.text = historyList[row].answer
         cell.question?.text = historyList[row].question
-    
-        if let url = NSURL(string: historyList[row].image!){
-            let session = NSURLSession.sharedSession()
-            session.dataTaskWithURL(url, completionHandler: {(data,response,error) in
-                if let e = error {
-                    print("Error \(e.localizedDescription)")
-                } else if let data = data, image = UIImage(data: data) {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        cell.user.image = image
-                    })
-                }
-            }).resume()
-        }
-        return cell
+        print("In here")
+//        print(historyList[row].image!)
+ 
+        let url = NSURL(string: historyList[row].image!)
+        let session = NSURLSession.sharedSession()
+        session.dataTaskWithURL(url!, completionHandler: {(data,response,error) in
+            if let e = error {
+                print("Error \(e.localizedDescription)")
+            } else if let data = data, image = UIImage(data: data) {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    cell.user.image = image
+                })
+            }
+        }).resume()
+    return cell
     }
 
     @IBAction func doneButtonPressed(sender: AnyObject) {

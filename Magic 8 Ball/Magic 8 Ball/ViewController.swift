@@ -33,9 +33,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Retrieve and save
         if let historyData = NSKeyedUnarchiver.unarchiveObjectWithFile(file) as? [QuestionResponseModel] {
             historyList = historyData.reverse()
-//            for data in historyData{
-//                historyList.append(QuestionResponseModel(question: data.question, answer: data.answer))
-//            }
         }
         // For the GO button onscreen keyboard
         inputText.delegate = self
@@ -45,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(animated: Bool) {
-        historyButton.setTitle(NSLocalizedString("historyList", comment: "history"), forState: .Normal)
+        historyButton.setTitle("History", forState: .Normal)
     }
     func getAnswer(sender:AnyObject) {
         circleImage.alpha = 0

@@ -182,7 +182,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="navigationTitle" destination="I5O-Ne-jxm" id="GhN-Om-j21"/>
+                        <outlet property="navigationTitle" destination="tGX-0T-ceN" id="waP-Wr-6vr"/>
                         <outlet property="tableView" destination="Ekg-Rw-ToS" id="vhe-rO-D46"/>
                     </connections>
                 </viewController>

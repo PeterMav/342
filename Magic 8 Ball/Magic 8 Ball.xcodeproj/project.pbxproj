@@ -16,6 +16,7 @@
 		37752C231B6EF77400726195 /* Magic_8_BallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37752C221B6EF77400726195 /* Magic_8_BallTests.swift */; };
 		D00B35C81CE80A2A0090C819 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */; };
 		D00B35CA1CE80ED50090C819 /* RemoteConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B35C91CE80ED50090C819 /* RemoteConnection.swift */; };
+		D021F84F1CE87AFA00A159AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D021F84E1CE87AFA00A159AD /* Images.xcassets */; };
 		D02521EB1B80A40C004B0236 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E31B80A40C004B0236 /* background.png */; };
 		D02521EC1B80A40C004B0236 /* circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E41B80A40C004B0236 /* circle1.png */; };
 		D02521ED1B80A40C004B0236 /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = D02521E51B80A40C004B0236 /* circle2.png */; };
@@ -63,6 +64,7 @@
 		37752C221B6EF77400726195 /* Magic_8_BallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_8_BallTests.swift; sourceTree = "<group>"; };
 		D00B35C71CE80A2A0090C819 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Magic 8 Ball/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 		D00B35C91CE80ED50090C819 /* RemoteConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConnection.swift; sourceTree = "<group>"; };
+		D021F84E1CE87AFA00A159AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D02521E31B80A40C004B0236 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		D02521E41B80A40C004B0236 /* circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle1.png; sourceTree = "<group>"; };
 		D02521E51B80A40C004B0236 /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D060EDA51CE76BFC0086C3BB /* Localizable.strings */,
 				D02521EA1B80A40C004B0236 /* shakeButton.png */,
 				37752C151B6EF77400726195 /* LaunchScreen.xib */,
+				D021F84E1CE87AFA00A159AD /* Images.xcassets */,
 				37752C0A1B6EF77400726195 /* Supporting Files */,
 			);
 			path = "Magic 8 Ball";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D060ED941CE756FF0086C3BB /* sound0.mp3 in Resources */,
+				D021F84F1CE87AFA00A159AD /* Images.xcassets in Resources */,
 				D02521F11B80A40C004B0236 /* circle6.png in Resources */,
 				D02521ED1B80A40C004B0236 /* circle2.png in Resources */,
 				D02521F21B80A40C004B0236 /* shakeButton.png in Resources */,
@@ -479,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -494,6 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "au.edu.uow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
