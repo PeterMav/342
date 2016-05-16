@@ -75,7 +75,6 @@ class RemoteConnection:NSObject {
                             let question = result.valueForKey("question") as! String
                             let answer = result.valueForKey("answer") as! String
                             let image = result.valueForKey("imageURL") as! String
-//                            print(image)
                             historyList.append(QuestionResponseModel(question: question, answer: answer, image: image))
                         }
                     }
